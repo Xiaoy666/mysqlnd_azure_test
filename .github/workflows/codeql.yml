@@ -63,7 +63,6 @@ jobs:
         # queries: security-extended,security-and-quality
     - name: Install php tool
       run: |
-        sudo apt-get update
         sudo apt-get purge php*
         sudo apt-get autoremove
         sudo apt-get install php7.2
