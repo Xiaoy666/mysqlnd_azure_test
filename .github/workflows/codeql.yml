@@ -65,7 +65,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get remove php8.1*
-        sudo apt-get install php7.2
+        sudo apt-get install php8.2
 
 
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
