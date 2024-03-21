@@ -20,16 +20,6 @@ on:
     - cron: '39 20 * * 5'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install php tool
-        run: |
-          sudo apt-get update
-          sudo apt-get purge php*
-          sudo apt-get autoremove
-          sudo apt-get install php7.2
-          
   analyze:
     name: Analyze
     # Runner size impacts CodeQL analysis time. To learn more, please see:
@@ -59,6 +49,13 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      
+    - name: Install php tool
+      run: |
+        sudo apt-get update
+        sudo apt-get purge php*
+        sudo apt-get autoremove
+        sudo apt-get install php7.2
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
