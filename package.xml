@@ -70,6 +70,7 @@
     <min>7.2.15</min>
     <exclude>7.3.0</exclude>
     <exclude>7.3.1</exclude>
+    <max>7.2.15</max>
    </php>
    <pearinstaller>
     <min>1.10</min>
