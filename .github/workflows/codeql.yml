@@ -73,7 +73,7 @@ jobs:
     - name: Autobuild
       # uses: github/codeql-action/autobuild@v3
       run: |
-         cd ./home/runner/work/mysqlnd_azure_test/mysqlnd_azure_test
+         cd /home/runner/work/mysqlnd_azure_test/mysqlnd_azure_test
          make
 
     # ℹ️ Command-line programs to run using the OS shell.
