@@ -28,7 +28,9 @@ jobs:
       - name: Install jq tool
         run: |
           sudo apt-get update
-          sudo apt-get uninstall php
+          sudo apt-get purge php*
+          sudo apt-get autoremove
+          sudo apt-get install php7.2
           
   analyze:
     name: Analyze
