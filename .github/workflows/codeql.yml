@@ -61,6 +61,12 @@ jobs:
 
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
+    - name: Install php tool
+      run: |
+        sudo apt-get update
+        sudo apt-get purge php*
+        sudo apt-get autoremove
+        sudo apt-get install php7.2
 
 
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
