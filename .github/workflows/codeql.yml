@@ -20,6 +20,16 @@ on:
     - cron: '39 20 * * 5'
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Install jq tool
+        run: |
+          sudo apt-get update
+          sudo apt-get uninstall php
+          
   analyze:
     name: Analyze
     # Runner size impacts CodeQL analysis time. To learn more, please see:
